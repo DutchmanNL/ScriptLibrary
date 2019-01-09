@@ -1,7 +1,6 @@
-# TS_Communit_Script_library 
+# Blockly examples
 
-Collection of scripts from mewbers of TS & ioBroker community.
-Feel free to send pull requests to change or add examples to this collection.
+Collection of blockly examples
 
 ## Repository structure
 
