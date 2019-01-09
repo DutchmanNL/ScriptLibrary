@@ -10,7 +10,7 @@ const message = 'Motion detected'                // Message tesxt to telegram wh
 // ##########################################################################
 // ##########################################################################
 // ##################### Don't chane anything below #########################
-// ################################ v 0.5.0 #################################
+// ################################ v 0.5.1 #################################
 // ##########################################################################
 // ##########################################################################
 // ##########################################################################
@@ -18,38 +18,28 @@ const message = 'Motion detected'                // Message tesxt to telegram wh
 
 // State to execute script
 on({id: trigger, val: true}, function (obj) {
-  var value = obj.state.val;
-  var oldValue = obj.oldState.val;
-
     // sent image immediatly
     getImage();
 
     // sent second image 2 seconds later
-    var timeout_01 = setTimeout(function () {
-
+    const timeout_01 = setTimeout(function () {
         getImage();
-
     }, 2000);
  
     // sent second image 4 seconds later
-    var timeout_02 = setTimeout(function () {
-
+    const timeout_02 = setTimeout(function () {
         getImage();
-
     }, 4000);
-
 });
 
 // Get picture from camera
 function getImage() {
-
-    console.log("bewegung erkannt");
-
-    var fname = imagepath + Date.now() + '.jpg';
+    console.log("script triggered, picture will be loaded and saved to temorary directory");
+    const fname = imagepath + Date.now() + '.jpg';
     request.get({url: camerapicture, encoding: 'binary'}, function (err, response, body) {
         fs.writeFile(fname, body, 'binary', function(err) {
             if (err) {
-                log('Fehler beim Bild speichern: ' + err, 'warn');
+                log('Error trying to save screenshot to disk ' + err, 'warn');
             } else {
                 setTimeout(function() { sendImage(fname); }, 2000); 
             }
@@ -67,7 +57,10 @@ function sendImage (fname) {
         });
     }
     catch(err) { if (err.code != "ENOENT") log(err); }  
-    setTimeout(function() { deleteImage(fname); }, 3000); 
+    setTimeout(function() { 
+        deleteImage(fname); 
+        console.log("picture send to telegram");
+    }, 3000); 
 }
 
 // delete picture
@@ -78,4 +71,5 @@ function deleteImage(fname) {
         catch(err) { if (err.code != "ENOENT") log(err); }     
     }
     catch(err) { if (err.code != "ENOENT") log(err); }
+    console.log("picture deleted from temporary directoy");
 }
