@@ -1,30 +1,30 @@
-# Javascript examples
+# Send picture of camera by telegram
 
-Collection of javascript examples
+This script will take a snapshot with your camera (camera must suppirt this) and send it to all telegram receipts.
+3 pictures are send with an timout of 3 seconds
 
-## Collection
+All credits to :
 
-| camera_movement_telegram | script to send picture of movement to telegram |
+* Kaiman55 https://forum.iobroker.net/viewtopic.php?f=20&t=19173&hilit=function+getImage+%7B&start=20
 
-## Repository structure
 
-- Script_type (java, blockly, vis)
--- index.md
--- Scripte_name_1
---- Readme.md
---- Scriptname.js
--- Scripte_name_2
---- Readme.md
---- Scriptname.js
--- Scripte_name_3
---- Readme.md
---- Scriptname.js
--- Scripte_name_4
---- Readme.md
---- Scriptname.js
+## configuration
+
+Provide the wanted trigger state (like motion sensor)
+'const trigger = 'zigbee.0.00158d0001ef6056.double_click'  // Define trigger here, example : motion sensor or button '
+
+Provide an URL te get the picture
+'const camerapicture = 'http://192.168.178.43/eec360c16d4f74799eacd7a662b3ede4/live/snapshot_720.jpg' ;    // Object from camera'
+
+Provide an temporary path to store the picture (will be deleted after 5 seconds)
+'const imagepath = '\tmp'                                       // Path to temporary store image from camera'
+
+Define messae to be send with picture
+'const message = 'Motion detected'                // Message tesxt to telegram when picture is sent'
 
 ## Changelog
 
+### 0.5.0
 * (Dutchman) repository created
 
 The MIT License (MIT)
