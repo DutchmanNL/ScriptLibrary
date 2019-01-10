@@ -6,7 +6,7 @@ Feel free to send pull requests to change or add examples to this collection.
 ## Repository structure
 
 - Script_type (java, blockly, vis)
-  - index.md
+  - README.md
   - Scripte_name_1
     - Readme.md
     - Scriptname.js
