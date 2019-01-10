@@ -9,19 +9,19 @@ Collection of javascript examples
 ## Repository structure
 
 - Script_type (java, blockly, vis)
--- index.md
--- Scripte_name_1
---- Readme.md
---- Scriptname.js
--- Scripte_name_2
---- Readme.md
---- Scriptname.js
--- Scripte_name_3
---- Readme.md
---- Scriptname.js
--- Scripte_name_4
---- Readme.md
---- Scriptname.js
+  - index.md
+  - Scripte_name_1
+    - Readme.md
+    - Scriptname.js
+  - Scripte_name_2
+    - Readme.md
+    - Scriptname.js
+  - Scripte_name_3
+    - Readme.md
+    - Scriptname.js
+  - Scripte_name_4
+  - Readme.md
+  - Scriptname.js
 
 ## Changelog
 
