@@ -1,0 +1,134 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="PvGzH|v1%wPP]!)0pJ_p">VerbrauchImp</variable>
+  </variables>
+  <block type="variables_set" id="=yH)6)$G*WRmB3exp.or" x="-350" y="101">
+    <field name="VAR" id="PvGzH|v1%wPP]!)0pJ_p" variabletype="">VerbrauchImp</field>
+    <value name="VALUE">
+      <block type="time_get" id="-.o~u*QC?kw|[m3Gv[0N">
+        <mutation format="false" language="false"></mutation>
+        <field name="OPTION">ms</field>
+      </block>
+    </value>
+    <next>
+      <block type="on_ext" id="B$gF}1DN6AV{mp0]u!(.">
+        <mutation items="1"></mutation>
+        <field name="CONDITION">ne</field>
+        <field name="ACK_CONDITION"></field>
+        <value name="OID0">
+          <shadow type="field_oid" id="0,tkS_.##P5Mq2cXVom.">
+            <field name="oid">mqtt.0.ESP_Keller.Strom.Count</field>
+          </shadow>
+        </value>
+        <statement name="STATEMENT">
+          <block type="controls_if" id="dP8}#bk5Rrw2T7wv;{V0">
+            <value name="IF0">
+              <block type="logic_compare" id="o9*YkL_cf(-d;Og~N87w">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="get_value" id="tXJEbO!IH)CatgH-FV6e">
+                    <field name="ATTR">val</field>
+                    <field name="OID">mqtt.0.ESP_Keller.Strom.Count</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="@0/DkuM,bb(#Q:)6V$1=">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="update" id="o+8_SI^9UoTrdn:Lur|C">
+                <mutation delay_input="false"></mutation>
+                <field name="OID">mqtt.0.ESP_Keller.Strom.test2</field>
+                <field name="WITH_DELAY">FALSE</field>
+                <value name="VALUE">
+                  <block type="math_round" id="5B,|HECxH79id3ytU3sK">
+                    <field name="OP">ROUNDDOWN</field>
+                    <value name="NUM">
+                      <shadow type="math_number" id="5!lc8-^m@i~9;/`,?yc]">
+                        <field name="NUM">3.1</field>
+                      </shadow>
+                      <block type="math_arithmetic" id="gaS{5uN5pzfd*vLfk0%t">
+                        <field name="OP">DIVIDE</field>
+                        <value name="A">
+                          <shadow type="math_number" id="h$oUaC*t~bFQ=,-rLTEk">
+                            <field name="NUM">1</field>
+                          </shadow>
+                          <block type="math_number" id="M,n6kGUPGD%SDR3Q0}N,">
+                            <field name="NUM">1440000</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <shadow type="math_number" id="_$k]+KZF^Dzd~{CG)osR">
+                            <field name="NUM">1</field>
+                          </shadow>
+                          <block type="math_arithmetic" id="!{q@ru}7hV~Q$ZAM2`0z" inline="false">
+                            <field name="OP">MINUS</field>
+                            <value name="A">
+                              <shadow type="math_number" id="t6dwV-ci-mzewJ~]plqN">
+                                <field name="NUM">1</field>
+                              </shadow>
+                              <block type="on_source" id="(VX:z!!IL,;fc-mrL1)#">
+                                <field name="ATTR">state.ts</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <shadow type="math_number" id="kh1#)q$fD,UaJrB?E={P">
+                                <field name="NUM">1</field>
+                              </shadow>
+                              <block type="variables_get" id="v3xseGJ!dTQ_M1O2|.np">
+                                <field name="VAR" id="PvGzH|v1%wPP]!)0pJ_p" variabletype="">VerbrauchImp</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="debug" id="?r9$`3yh^r?jT_b}C9Td">
+                    <field name="Severity">log</field>
+                    <value name="TEXT">
+                      <shadow type="text" id="v)?HvW+3q-6j:SS^1Iju">
+                        <field name="TEXT">666382458</field>
+                      </shadow>
+                      <block type="on_source" id="Qlc.#:uZO?#zY}T!hBgT">
+                        <field name="ATTR">state.ts</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="debug" id="U$:Nu+fNDNK1gp8ja-vv">
+                        <field name="Severity">log</field>
+                        <value name="TEXT">
+                          <shadow type="text" id="M_:L}Klk$P]Op3)|X8W5">
+                            <field name="TEXT">test</field>
+                          </shadow>
+                          <block type="variables_get" id="j!}xh=6wF0q~7:Hp0NYR">
+                            <field name="VAR" id="PvGzH|v1%wPP]!)0pJ_p" variabletype="">VerbrauchImp</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="variables_set" id="MdlHF18NK;i1Q1m.Vu0]">
+                            <field name="VAR" id="PvGzH|v1%wPP]!)0pJ_p" variabletype="">VerbrauchImp</field>
+                            <value name="VALUE">
+                              <block type="on_source" id="leGC,K!W/CIXo86w20^p">
+                                <field name="ATTR">state.ts</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

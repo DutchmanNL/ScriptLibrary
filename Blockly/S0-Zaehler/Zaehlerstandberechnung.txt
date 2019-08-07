@@ -1,0 +1,101 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="on_ext" id="/Ke^4uol-G2u2UJ70Pz3" x="-487" y="-237">
+    <mutation items="1"></mutation>
+    <field name="CONDITION">ne</field>
+    <field name="ACK_CONDITION"></field>
+    <value name="OID0">
+      <shadow type="field_oid" id="nYK=%!}:pW3ls0s,jJ)x">
+        <field name="oid">mqtt.0.ESP_Keller.Strom.Total</field>
+      </shadow>
+    </value>
+    <statement name="STATEMENT">
+      <block type="controls_if" id="aE6lr~PHT(Hlt^e7`c!1">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_compare" id="lobA;m5lrok6!)1HqHLY">
+            <field name="OP">LT</field>
+            <value name="A">
+              <block type="get_value" id="VKRfDx=.8Mx[s~bj#Wl8">
+                <field name="ATTR">val</field>
+                <field name="OID">mqtt.0.ESP_Keller.Strom.Arbeitsvariable</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="|X22.Kfig/K{Ys`z0haG">
+                <field name="TEXT">400</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="control" id="!P8`ffBg9KBqC,GBwnoI">
+            <mutation delay_input="false"></mutation>
+            <field name="OID">mqtt.0.ESP_Keller.Strom.Arbeitsvariable</field>
+            <field name="WITH_DELAY">FALSE</field>
+            <value name="VALUE">
+              <block type="math_arithmetic" id="1L.W`XkSE;D.7t3OyHtF">
+                <field name="OP">ADD</field>
+                <value name="A">
+                  <shadow type="math_number" id="G7NG8UAlP5v1vl%@!(?Y">
+                    <field name="NUM">1</field>
+                  </shadow>
+                  <block type="get_value" id="7sg^{smwsYrJ]DWiLOsu">
+                    <field name="ATTR">val</field>
+                    <field name="OID">mqtt.0.ESP_Keller.Strom.Arbeitsvariable</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id="_?NJ0n~:8gnxP38|3IIu">
+                    <field name="NUM">1</field>
+                  </shadow>
+                  <block type="get_value" id="DMsv+YX6Z}6e@zGvyU^G">
+                    <field name="ATTR">val</field>
+                    <field name="OID">mqtt.0.ESP_Keller.Strom.Count</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="control" id="OBP6Sq0JGkM+VZHEgRrz">
+            <mutation delay_input="false"></mutation>
+            <field name="OID">mqtt.0.ESP_Keller.Strom.Arbeitsvariable</field>
+            <field name="WITH_DELAY">FALSE</field>
+            <value name="VALUE">
+              <block type="math_number" id="Z*RZ.95hTkz%:oY-uar1">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+            <next>
+              <block type="control" id="ky#SKK:c9oTTyhKqg1^R">
+                <mutation delay_input="false"></mutation>
+                <field name="OID">mqtt.0.ESP_Keller.Strom.Zählerstand</field>
+                <field name="WITH_DELAY">FALSE</field>
+                <value name="VALUE">
+                  <block type="math_arithmetic" id="3H6MGEQN%Py@{5eGdUIu">
+                    <field name="OP">ADD</field>
+                    <value name="A">
+                      <shadow type="math_number" id="G7NG8UAlP5v1vl%@!(?Y">
+                        <field name="NUM">1</field>
+                      </shadow>
+                      <block type="get_value" id="3QqOy:M~7HqV8Gq7Oo?A">
+                        <field name="ATTR">val</field>
+                        <field name="OID">mqtt.0.ESP_Keller.Strom.Zählerstand</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <shadow type="math_number" id="_?NJ0n~:8gnxP38|3IIu">
+                        <field name="NUM">1</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+</xml>
