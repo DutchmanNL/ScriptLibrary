@@ -1,4 +1,4 @@
-# TS_Communit_Script_library 
+# Smarthome TS-Community script library
 
 Collection of scripts from mewbers of TS & ioBroker community.
 Feel free to send pull requests to change or add examples to this collection.
