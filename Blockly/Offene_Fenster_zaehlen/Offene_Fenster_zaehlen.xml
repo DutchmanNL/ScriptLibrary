@@ -1,10 +1,10 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
   <variables>
     <variable type="" id="f^s02]e_{L54fPTdY5%x">liste</variable>
-    <variable type="" id="YS@v,^6QAG?xJ6tmR*Mb">AnzahlOffen</variable>
     <variable type="" id="F%3V7C7216u}(Q2t2Zn?">Offene_Fenster</variable>
+    <variable type="" id="YS@v,^6QAG?xJ6tmR*Mb">AnzahlOffen</variable>
   </variables>
-  <block type="procedures_defcustomnoreturn" id="V]K{$R%Bo;R,_%|iT3#[" x="-313" y="1538">
+  <block type="procedures_defcustomnoreturn" id="V]K{$R%Bo;R,_%|iT3#[" x="-312" y="1487">
     <mutation statements="false">
       <arg name="liste" varid="f^s02]e_{L54fPTdY5%x"></arg>
     </mutation>
@@ -12,304 +12,148 @@
     <field name="SCRIPT">c2VuZFRvKCd0ZWxlZ3JhbS4wJywgew0KICAgIHRleHQ6ICAgbGlzdGUsDQogICAgICAgIHJlc2l6ZV9rZXlib2FyZDogICB0cnVlLA0KICAgICAgICBvbmVfdGltZV9rZXlib2FyZDogZmFsc2UNCn0pOw==</field>
     <comment pinned="false" h="80" w="160">Beschreibe diese Funktion …</comment>
   </block>
+  <block type="comment" id="`j1y9SO1))-_*HEv.M+P" x="38" y="1537">
+    <field name="COMMENT">Hier Datenpunkte der überwachten Fenster eintragen</field>
+  </block>
   <block type="procedures_defcustomnoreturn" id="$4(-79A(M@ttmJHPMVV:" x="-313" y="1563">
     <mutation statements="false"></mutation>
     <field name="NAME">Datenpunkte erstellen</field>
-    <field name="SCRIPT">Y3JlYXRlU3RhdGUoJ2phdmFzY3JpcHQuMC5GZW5zdGVyLkZlbnN0ZXInLCB7bmFtZTogIkZlbnN0ZXIiLCByb2xlOiAic3RhdGUiLCB0eXBlOiAibWl4ZWQifSk7DQpjcmVhdGVTdGF0ZSgnamF2YXNjcmlwdC4wLkZlbnN0ZXIuV29obnppbW1lcl9rbGVpbicsIHtuYW1lOiAiV29obnppbW1lcl9rbGVpbiIsIHJvbGU6ICJzdGF0ZSIsIHR5cGU6ICJib29sZWFuIn0pOw0KY3JlYXRlU3RhdGUoJ2phdmFzY3JpcHQuMC5GZW5zdGVyLldvaG56aW1tZXJfZ3Jv3ycsIHtuYW1lOiAiV29obnppbW1lcl9ncm/fIiwgcm9sZTogInN0YXRlIiwgdHlwZTogImJvb2xlYW4ifSk7DQpjcmVhdGVTdGF0ZSgnamF2YXNjcmlwdC4wLkZlbnN0ZXIuS/xjaGVuZmVuc3RlcicsIHtuYW1lOiAiS/xjaGVuZmVuc3RlciIsIHJvbGU6ICJzdGF0ZSIsIHR5cGU6ICJib29sZWFuIn0pOw0KY3JlYXRlU3RhdGUoJ2phdmFzY3JpcHQuMC5GZW5zdGVyLkJhZGV6aW1tZXJfcmVjaHRzJywge25hbWU6ICJCYWRlemltbWVyX3JlY2h0cyIsIHJvbGU6ICJzdGF0ZSIsIHR5cGU6ICJib29sZWFuIn0pOw0KY3JlYXRlU3RhdGUoJ2phdmFzY3JpcHQuMC5GZW5zdGVyLkJhZGV6aW1tZXJfbGlua3MnLCB7bmFtZTogIkJhZGV6aW1tZXJfbGlua3MiLCByb2xlOiAic3RhdGUiLCB0eXBlOiAiYm9vbGVhbiJ9KTsNCmNyZWF0ZVN0YXRlKCdqYXZhc2NyaXB0LjAuRmVuc3Rlci5LaW5kZXJ6aW1tZXJfbGlua3MnLCB7bmFtZTogIktpbmRlcnppbW1lcl9saW5rcyIsIHJvbGU6ICJzdGF0ZSIsIHR5cGU6ICJib29sZWFuIn0pOw0KY3JlYXRlU3RhdGUoJ2phdmFzY3JpcHQuMC5GZW5zdGVyLktpbmRlcnppbW1lcl9yZWNodHMnLCB7bmFtZTogIktpbmRlcnppbW1lcl9yZWNodHMiLCByb2xlOiAic3RhdGUiLCB0eXBlOiAiYm9vbGVhbiJ9KTsNCmNyZWF0ZVN0YXRlKCdqYXZhc2NyaXB0LjAuRmVuc3Rlci5TY2hsYWZ6aW1tZXJfZ3Jv3ycsIHtuYW1lOiAiU2NobGFmemltbWVyX2dyb98iLCByb2xlOiAic3RhdGUiLCB0eXBlOiAiYm9vbGVhbiJ9KTsNCmNyZWF0ZVN0YXRlKCdqYXZhc2NyaXB0LjAuRmVuc3Rlci5TY2hsYWZ6aW1tZXJfa2xlaW4nLCB7bmFtZTogIlNjaGxhZnppbW1lcl9rbGVpbiIsIHJvbGU6ICJzdGF0ZSIsIHR5cGU6ICJib29sZWFuIn0pOw0KY3JlYXRlU3RhdGUoJ2phdmFzY3JpcHQuMC5GZW5zdGVyLkZlbnN0ZXJfVGV4dCcsIHtuYW1lOiAiRmVuc3Rlcl9UZXh0Iiwgcm9sZTogInN0YXRlIiwgdHlwZTogInN0cmluZyJ9KTs=</field>
+    <field name="SCRIPT">Ly8gSGllciBrZWluZSDkbmRlcnVuZ2VuIHZvcm5laG1lbg0KY3JlYXRlU3RhdGUoJ2phdmFzY3JpcHQuMC5GZW5zdGVyLkZlbnN0ZXInLCB7bmFtZTogIkZlbnN0ZXIiLCByb2xlOiAic3RhdGUiLCB0eXBlOiAibWl4ZWQifSk7DQpjcmVhdGVTdGF0ZSgnamF2YXNjcmlwdC4wLkZlbnN0ZXIuRmVuc3Rlcl9UZXh0Jywge25hbWU6ICJGZW5zdGVyX1RleHQiLCByb2xlOiAic3RhdGUiLCB0eXBlOiAic3RyaW5nIn0pOw0KDQovLyBBYiBoaWVyIORuZGVydW5nZW4gdm9ybmVobWVuLiAoLS0tLS12LS0tLS0gZGllc2VyIHVuZCAtLS0tLS0tLS0tLXYtLS0tLS0tLS0tIGRpZXNlciBOYW1lIG11c3MgZ2XkbmRlcnQgd2VyZGVuKQ0KY3JlYXRlU3RhdGUoJ2phdmFzY3JpcHQuMC5GZW5zdGVyLldvaG56aW1tZXJfa2xlaW4nLCB7bmFtZTogIldvaG56aW1tZXJfa2xlaW4iLCByb2xlOiAic3RhdGUiLCB0eXBlOiAiYm9vbGVhbiJ9KTsNCmNyZWF0ZVN0YXRlKCdqYXZhc2NyaXB0LjAuRmVuc3Rlci5Xb2huemltbWVyX2dyb98nLCB7bmFtZTogIldvaG56aW1tZXJfZ3Jv3yIsIHJvbGU6ICJzdGF0ZSIsIHR5cGU6ICJib29sZWFuIn0pOw0KY3JlYXRlU3RhdGUoJ2phdmFzY3JpcHQuMC5GZW5zdGVyLkv8Y2hlbmZlbnN0ZXInLCB7bmFtZTogIkv8Y2hlbmZlbnN0ZXIiLCByb2xlOiAic3RhdGUiLCB0eXBlOiAiYm9vbGVhbiJ9KTsNCmNyZWF0ZVN0YXRlKCdqYXZhc2NyaXB0LjAuRmVuc3Rlci5CYWRlemltbWVyX3JlY2h0cycsIHtuYW1lOiAiQmFkZXppbW1lcl9yZWNodHMiLCByb2xlOiAic3RhdGUiLCB0eXBlOiAiYm9vbGVhbiJ9KTsNCmNyZWF0ZVN0YXRlKCdqYXZhc2NyaXB0LjAuRmVuc3Rlci5CYWRlemltbWVyX2xpbmtzJywge25hbWU6ICJCYWRlemltbWVyX2xpbmtzIiwgcm9sZTogInN0YXRlIiwgdHlwZTogImJvb2xlYW4ifSk7DQpjcmVhdGVTdGF0ZSgnamF2YXNjcmlwdC4wLkZlbnN0ZXIuS2luZGVyemltbWVyX2xpbmtzJywge25hbWU6ICJLaW5kZXJ6aW1tZXJfbGlua3MiLCByb2xlOiAic3RhdGUiLCB0eXBlOiAiYm9vbGVhbiJ9KTsNCmNyZWF0ZVN0YXRlKCdqYXZhc2NyaXB0LjAuRmVuc3Rlci5LaW5kZXJ6aW1tZXJfcmVjaHRzJywge25hbWU6ICJLaW5kZXJ6aW1tZXJfcmVjaHRzIiwgcm9sZTogInN0YXRlIiwgdHlwZTogImJvb2xlYW4ifSk7DQpjcmVhdGVTdGF0ZSgnamF2YXNjcmlwdC4wLkZlbnN0ZXIuU2NobGFmemltbWVyX2dyb98nLCB7bmFtZTogIlNjaGxhZnppbW1lcl9ncm/fIiwgcm9sZTogInN0YXRlIiwgdHlwZTogImJvb2xlYW4ifSk7DQpjcmVhdGVTdGF0ZSgnamF2YXNjcmlwdC4wLkZlbnN0ZXIuU2NobGFmemltbWVyX2tsZWluJywge25hbWU6ICJTY2hsYWZ6aW1tZXJfa2xlaW4iLCByb2xlOiAic3RhdGUiLCB0eXBlOiAiYm9vbGVhbiJ9KTs=</field>
     <comment pinned="false" h="80" w="160">Beschreibe diese Funktion …</comment>
   </block>
   <block type="procedures_callcustomnoreturn" id="}oJ0#TdR?a{R|xS~Zu$;" x="-313" y="1662">
     <mutation name="Datenpunkte erstellen"></mutation>
     <next>
-      <block type="on_ext" id="@QkzQsh6z3#|!OcBbDIY">
-        <mutation items="9"></mutation>
-        <field name="CONDITION">ne</field>
-        <field name="ACK_CONDITION"></field>
-        <value name="OID0">
-          <shadow type="field_oid" id="($VT#T-w.p+r=AA{2P-/">
-            <field name="oid">#Eigene.0.Lüften.Balkontür</field>
-          </shadow>
-          <block type="field_oid" id="lc(jS6KABhiGPzvu9V]V">
-            <field name="oid">zigbee.0.00158d0002e6ad07.opened</field>
-          </block>
-        </value>
-        <value name="OID1">
-          <shadow type="field_oid" id="+G:8T1MJO?(+wdeR)=g=">
-            <field name="oid">#Eigene.0.Lüften.Fenster_Bad</field>
-          </shadow>
-          <block type="field_oid" id="_CPL5}q=nWd4pPm[HhL,">
-            <field name="oid">zigbee.0.00158d00025ed27b.opened</field>
-          </block>
-        </value>
-        <value name="OID2">
-          <shadow type="field_oid" id="V*|;j.cQkeEG?93:aUO%">
-            <field name="oid">default</field>
-          </shadow>
-          <block type="field_oid" id="QJ1e{e@Rn=JbDXX.XBxk">
-            <field name="oid">zigbee.0.00158d0002e21304.opened</field>
-          </block>
-        </value>
-        <value name="OID3">
-          <shadow type="field_oid" id="r9=y/(X.6c73uP6WPt9e">
-            <field name="oid">default</field>
-          </shadow>
-          <block type="field_oid" id="s=-a0e8*ePBQt2`saQ:L">
-            <field name="oid">zigbee.0.00158d000309f195.opened</field>
-          </block>
-        </value>
-        <value name="OID4">
-          <shadow type="field_oid" id="QJzD,]ER1RfWt.CV4BS[">
-            <field name="oid">default</field>
-          </shadow>
-          <block type="field_oid" id="qG~^?o_c,v:mu*r$oMq1">
-            <field name="oid">zigbee.0.00158d00025ed5ed.opened</field>
-          </block>
-        </value>
-        <value name="OID5">
-          <shadow type="field_oid" id="49-vQ~`Cu/ZBR;6Jc{hw">
-            <field name="oid">default</field>
-          </shadow>
-          <block type="field_oid" id=":7Dk[FFWa+5YosQH0z.f">
-            <field name="oid">zigbee.0.00158d00025ed203.opened</field>
-          </block>
-        </value>
-        <value name="OID6">
-          <shadow type="field_oid" id="_9lmw5ZsP3re8a!v_^hS">
-            <field name="oid">default</field>
-          </shadow>
-          <block type="field_oid" id="kQd]03A`j|}|OarOESM0">
-            <field name="oid">zigbee.0.00158d00025ed272.opened</field>
-          </block>
-        </value>
-        <value name="OID7">
-          <shadow type="field_oid" id="FF$![%-Y;j80?i$uy4ef">
-            <field name="oid">default</field>
-          </shadow>
-          <block type="field_oid" id="[Xl?,9]6RBNoeP%]Mip9">
-            <field name="oid">zigbee.0.00158d0002e2144f.opened</field>
-          </block>
-        </value>
-        <value name="OID8">
-          <shadow type="field_oid" id=".F]7IUFER;;goMLM^BA,">
-            <field name="oid">default</field>
-          </shadow>
-          <block type="field_oid" id="9zE7lnk%Nh=%sk*VWB4D">
-            <field name="oid">zigbee.0.00158d00025ed230.opened</field>
-          </block>
-        </value>
-        <statement name="STATEMENT">
-          <block type="variables_set" id="_6,#Ec)l!WL-#lX6*k[4">
-            <field name="VAR" id="YS@v,^6QAG?xJ6tmR*Mb" variabletype="">AnzahlOffen</field>
-            <value name="VALUE">
-              <block type="math_number" id="!}I!5@L2/2yR4[st!K;^">
-                <field name="NUM">0</field>
+      <block type="comment" id="PNkuV:O3o|=}-j:JiA/s">
+        <field name="COMMENT">Hier States der Fensterkontakte eintragen</field>
+        <next>
+          <block type="on_ext" id="@QkzQsh6z3#|!OcBbDIY">
+            <mutation items="9"></mutation>
+            <field name="CONDITION">ne</field>
+            <field name="ACK_CONDITION"></field>
+            <value name="OID0">
+              <shadow type="field_oid" id="($VT#T-w.p+r=AA{2P-/">
+                <field name="oid">#Eigene.0.Lüften.Balkontür</field>
+              </shadow>
+              <block type="field_oid" id="lc(jS6KABhiGPzvu9V]V">
+                <field name="oid">zigbee.0.00158d0002e6ad07.opened</field>
               </block>
             </value>
-            <next>
-              <block type="controls_if" id="V7oZMgfLKoRL:CSFoZj)">
-                <mutation else="1"></mutation>
-                <value name="IF0">
-                  <block type="logic_compare" id="I$_0pCREXi-3(7j(Jv+V">
-                    <field name="OP">EQ</field>
-                    <value name="A">
-                      <block type="get_value" id="yx5a,pt)jj`2;;}nwayk">
-                        <field name="ATTR">val</field>
-                        <field name="OID">zigbee.0.00158d0002e6ad07.opened</field>
-                      </block>
-                    </value>
-                    <value name="B">
-                      <block type="logic_boolean" id="wZL|;sER)PTrE,g=~1^2">
-                        <field name="BOOL">TRUE</field>
-                      </block>
-                    </value>
+            <value name="OID1">
+              <shadow type="field_oid" id="+G:8T1MJO?(+wdeR)=g=">
+                <field name="oid">#Eigene.0.Lüften.Fenster_Bad</field>
+              </shadow>
+              <block type="field_oid" id="_CPL5}q=nWd4pPm[HhL,">
+                <field name="oid">zigbee.0.00158d00025ed27b.opened</field>
+              </block>
+            </value>
+            <value name="OID2">
+              <shadow type="field_oid" id="V*|;j.cQkeEG?93:aUO%">
+                <field name="oid">default</field>
+              </shadow>
+              <block type="field_oid" id="QJ1e{e@Rn=JbDXX.XBxk">
+                <field name="oid">zigbee.0.00158d0002e21304.opened</field>
+              </block>
+            </value>
+            <value name="OID3">
+              <shadow type="field_oid" id="r9=y/(X.6c73uP6WPt9e">
+                <field name="oid">default</field>
+              </shadow>
+              <block type="field_oid" id="s=-a0e8*ePBQt2`saQ:L">
+                <field name="oid">zigbee.0.00158d000309f195.opened</field>
+              </block>
+            </value>
+            <value name="OID4">
+              <shadow type="field_oid" id="QJzD,]ER1RfWt.CV4BS[">
+                <field name="oid">default</field>
+              </shadow>
+              <block type="field_oid" id="qG~^?o_c,v:mu*r$oMq1">
+                <field name="oid">zigbee.0.00158d00025ed5ed.opened</field>
+              </block>
+            </value>
+            <value name="OID5">
+              <shadow type="field_oid" id="49-vQ~`Cu/ZBR;6Jc{hw">
+                <field name="oid">default</field>
+              </shadow>
+              <block type="field_oid" id=":7Dk[FFWa+5YosQH0z.f">
+                <field name="oid">zigbee.0.00158d00025ed203.opened</field>
+              </block>
+            </value>
+            <value name="OID6">
+              <shadow type="field_oid" id="_9lmw5ZsP3re8a!v_^hS">
+                <field name="oid">default</field>
+              </shadow>
+              <block type="field_oid" id="kQd]03A`j|}|OarOESM0">
+                <field name="oid">zigbee.0.00158d00025ed272.opened</field>
+              </block>
+            </value>
+            <value name="OID7">
+              <shadow type="field_oid" id="FF$![%-Y;j80?i$uy4ef">
+                <field name="oid">default</field>
+              </shadow>
+              <block type="field_oid" id="[Xl?,9]6RBNoeP%]Mip9">
+                <field name="oid">zigbee.0.00158d0002e2144f.opened</field>
+              </block>
+            </value>
+            <value name="OID8">
+              <shadow type="field_oid" id=".F]7IUFER;;goMLM^BA,">
+                <field name="oid">default</field>
+              </shadow>
+              <block type="field_oid" id="9zE7lnk%Nh=%sk*VWB4D">
+                <field name="oid">zigbee.0.00158d00025ed230.opened</field>
+              </block>
+            </value>
+            <statement name="STATEMENT">
+              <block type="variables_set" id="_6,#Ec)l!WL-#lX6*k[4">
+                <field name="VAR" id="YS@v,^6QAG?xJ6tmR*Mb" variabletype="">AnzahlOffen</field>
+                <value name="VALUE">
+                  <block type="math_number" id="!}I!5@L2/2yR4[st!K;^">
+                    <field name="NUM">0</field>
                   </block>
                 </value>
-                <statement name="DO0">
-                  <block type="control" id="icfx.!zgrup6wFkf_EHD">
-                    <mutation delay_input="false"></mutation>
-                    <field name="OID">javascript.0.Fenster.Wohnzimmer_groß</field>
-                    <field name="WITH_DELAY">FALSE</field>
-                    <value name="VALUE">
-                      <block type="logic_boolean" id="*BgAE(?O1C;KpMD:Sdx-">
-                        <field name="BOOL">TRUE</field>
-                      </block>
-                    </value>
-                    <next>
-                      <block type="math_change" id="eVHqjv];cd_Z3u~+|N*3">
-                        <field name="VAR" id="YS@v,^6QAG?xJ6tmR*Mb" variabletype="">AnzahlOffen</field>
-                        <value name="DELTA">
-                          <shadow type="math_number" id="0G2vHGsrZdtZO%BHVN,o">
-                            <field name="NUM">1</field>
-                          </shadow>
-                          <block type="math_number" id="L$BtexbTv,A%UbTpa#.#">
-                            <field name="NUM">1</field>
-                          </block>
-                        </value>
-                      </block>
-                    </next>
-                  </block>
-                </statement>
-                <statement name="ELSE">
-                  <block type="control" id="Ph?|z:1O*(WO(/y)%9,o">
-                    <mutation delay_input="false"></mutation>
-                    <field name="OID">javascript.0.Fenster.Wohnzimmer_groß</field>
-                    <field name="WITH_DELAY">FALSE</field>
-                    <value name="VALUE">
-                      <block type="logic_boolean" id="Wg]9j7S~e%Vu1`2csVN@">
-                        <field name="BOOL">FALSE</field>
-                      </block>
-                    </value>
-                  </block>
-                </statement>
                 <next>
-                  <block type="controls_if" id="|+5FY1Idzwakr+Zn4.^/">
-                    <mutation else="1"></mutation>
-                    <value name="IF0">
-                      <block type="logic_compare" id="j#aYEgJkNUbuFS?@*6?J">
-                        <field name="OP">EQ</field>
-                        <value name="A">
-                          <block type="get_value" id="/@4[n;?wikGcBp}PP4sA">
-                            <field name="ATTR">val</field>
-                            <field name="OID">zigbee.0.00158d00025ed27b.opened</field>
-                          </block>
-                        </value>
-                        <value name="B">
-                          <block type="logic_boolean" id="|E4wS=)PVDixY]%A}]4m">
-                            <field name="BOOL">TRUE</field>
-                          </block>
-                        </value>
-                      </block>
-                    </value>
-                    <statement name="DO0">
-                      <block type="control" id="sSoR.Cmkk~Ug6sa%6p.M">
-                        <mutation delay_input="false"></mutation>
-                        <field name="OID">javascript.0.Fenster.Wohnzimmer_klein</field>
-                        <field name="WITH_DELAY">FALSE</field>
-                        <value name="VALUE">
-                          <block type="logic_boolean" id="y==*j;`%#H([KrBjjr8l">
-                            <field name="BOOL">TRUE</field>
-                          </block>
-                        </value>
-                        <next>
-                          <block type="math_change" id="-jwe$LYL*n5f3WI#dn$c">
-                            <field name="VAR" id="YS@v,^6QAG?xJ6tmR*Mb" variabletype="">AnzahlOffen</field>
-                            <value name="DELTA">
-                              <shadow type="math_number" id="0G2vHGsrZdtZO%BHVN,o">
-                                <field name="NUM">1</field>
-                              </shadow>
-                              <block type="math_number" id="^Fh[otWmSV[m,)p*Z`:M">
-                                <field name="NUM">1</field>
-                              </block>
-                            </value>
-                          </block>
-                        </next>
-                      </block>
-                    </statement>
-                    <statement name="ELSE">
-                      <block type="control" id="/RSUzk#}`t{knQ:UtLwD">
-                        <mutation delay_input="false"></mutation>
-                        <field name="OID">javascript.0.Fenster.Wohnzimmer_klein</field>
-                        <field name="WITH_DELAY">FALSE</field>
-                        <value name="VALUE">
-                          <block type="logic_boolean" id="ZQD75zYLr!!@]:eM};nP">
-                            <field name="BOOL">FALSE</field>
-                          </block>
-                        </value>
-                      </block>
-                    </statement>
+                  <block type="comment" id="]P$#1t2r+-c#hM=4K*Ms">
+                    <field name="COMMENT">Bei Wert die oben angegeben States eintragen</field>
                     <next>
-                      <block type="controls_if" id="z#.i-:ai8YFj)tG{tuCM">
-                        <mutation else="1"></mutation>
-                        <value name="IF0">
-                          <block type="logic_compare" id=")W8p:,ywrtx)9nF7oSmF">
-                            <field name="OP">EQ</field>
-                            <value name="A">
-                              <block type="get_value" id="}OzFz{+TDc][w3?P06CU">
-                                <field name="ATTR">val</field>
-                                <field name="OID">zigbee.0.00158d0002e21304.opened</field>
-                              </block>
-                            </value>
-                            <value name="B">
-                              <block type="logic_boolean" id="E]#^pwy3_}-JP=P*!4_a">
-                                <field name="BOOL">TRUE</field>
-                              </block>
-                            </value>
-                          </block>
-                        </value>
-                        <statement name="DO0">
-                          <block type="control" id="R2|7N9;QF%iHA0^2Ln9T">
-                            <mutation delay_input="false"></mutation>
-                            <field name="OID">javascript.0.Fenster.Küchenfenster</field>
-                            <field name="WITH_DELAY">FALSE</field>
-                            <value name="VALUE">
-                              <block type="logic_boolean" id=",Y^S+Pw{oRBLh?veVRzY">
-                                <field name="BOOL">TRUE</field>
-                              </block>
-                            </value>
-                            <next>
-                              <block type="math_change" id="Ehjo!W9u$nLu$:$SZ1q7">
-                                <field name="VAR" id="YS@v,^6QAG?xJ6tmR*Mb" variabletype="">AnzahlOffen</field>
-                                <value name="DELTA">
-                                  <shadow type="math_number" id="0G2vHGsrZdtZO%BHVN,o">
-                                    <field name="NUM">1</field>
-                                  </shadow>
-                                  <block type="math_number" id="+YW6urOGQM1@Y7eH.j)J">
-                                    <field name="NUM">1</field>
-                                  </block>
-                                </value>
-                              </block>
-                            </next>
-                          </block>
-                        </statement>
-                        <statement name="ELSE">
-                          <block type="control" id="G/tL)I,?9jq^qPn]!7x0">
-                            <mutation delay_input="false"></mutation>
-                            <field name="OID">javascript.0.Fenster.Küchenfenster</field>
-                            <field name="WITH_DELAY">FALSE</field>
-                            <value name="VALUE">
-                              <block type="logic_boolean" id="T3RU(WbKxT$jm,I%*et#">
-                                <field name="BOOL">FALSE</field>
-                              </block>
-                            </value>
-                          </block>
-                        </statement>
+                      <block type="comment" id="%IcO:e@1l5A^+U(a2=:!">
+                        <field name="COMMENT">Bei Steuere die erstellten Datenpunkte angeben</field>
                         <next>
-                          <block type="controls_if" id="=#gdKDmL);P7|$Y[dSAT">
+                          <block type="controls_if" id="V7oZMgfLKoRL:CSFoZj)">
                             <mutation else="1"></mutation>
                             <value name="IF0">
-                              <block type="logic_compare" id="YL-^ca]]7M.kx]xltKpG">
+                              <block type="logic_compare" id="I$_0pCREXi-3(7j(Jv+V">
                                 <field name="OP">EQ</field>
                                 <value name="A">
-                                  <block type="get_value" id="fv2BRSzNd^k8-}}=hMC~">
+                                  <block type="get_value" id="yx5a,pt)jj`2;;}nwayk">
                                     <field name="ATTR">val</field>
-                                    <field name="OID">zigbee.0.00158d000309f195.opened</field>
+                                    <field name="OID">zigbee.0.00158d0002e6ad07.opened</field>
                                   </block>
                                 </value>
                                 <value name="B">
-                                  <block type="logic_boolean" id="s%z^|LrlM$?+C[tP}=MH">
+                                  <block type="logic_boolean" id="wZL|;sER)PTrE,g=~1^2">
                                     <field name="BOOL">TRUE</field>
                                   </block>
                                 </value>
                               </block>
                             </value>
                             <statement name="DO0">
-                              <block type="control" id="gy}]SkKMK]~.3Q%M_M}#">
+                              <block type="control" id="icfx.!zgrup6wFkf_EHD">
                                 <mutation delay_input="false"></mutation>
-                                <field name="OID">javascript.0.Fenster.Badezimmer_rechts</field>
+                                <field name="OID">javascript.0.Fenster.Wohnzimmer_groß</field>
                                 <field name="WITH_DELAY">FALSE</field>
                                 <value name="VALUE">
-                                  <block type="logic_boolean" id="[DvP-%3RwH.sW~w;bd!o">
+                                  <block type="logic_boolean" id="*BgAE(?O1C;KpMD:Sdx-">
                                     <field name="BOOL">TRUE</field>
                                   </block>
                                 </value>
                                 <next>
-                                  <block type="math_change" id="lIf(p|7Y9KBJw~mgWSbC">
+                                  <block type="math_change" id="eVHqjv];cd_Z3u~+|N*3">
                                     <field name="VAR" id="YS@v,^6QAG?xJ6tmR*Mb" variabletype="">AnzahlOffen</field>
                                     <value name="DELTA">
                                       <shadow type="math_number" id="0G2vHGsrZdtZO%BHVN,o">
                                         <field name="NUM">1</field>
                                       </shadow>
-                                      <block type="math_number" id="w%G|,`-A^C_e@UWLwGMj">
+                                      <block type="math_number" id="L$BtexbTv,A%UbTpa#.#">
                                         <field name="NUM">1</field>
                                       </block>
                                     </value>
@@ -318,54 +162,54 @@
                               </block>
                             </statement>
                             <statement name="ELSE">
-                              <block type="control" id="RSc2ng)WLh-ewHJl@U0#">
+                              <block type="control" id="Ph?|z:1O*(WO(/y)%9,o">
                                 <mutation delay_input="false"></mutation>
-                                <field name="OID">javascript.0.Fenster.Badezimmer_rechts</field>
+                                <field name="OID">javascript.0.Fenster.Wohnzimmer_groß</field>
                                 <field name="WITH_DELAY">FALSE</field>
                                 <value name="VALUE">
-                                  <block type="logic_boolean" id="7a@ctW.$xP1L$r/U$%Om">
+                                  <block type="logic_boolean" id="Wg]9j7S~e%Vu1`2csVN@">
                                     <field name="BOOL">FALSE</field>
                                   </block>
                                 </value>
                               </block>
                             </statement>
                             <next>
-                              <block type="controls_if" id=".u#8[am/51A,T5iwq:8d">
+                              <block type="controls_if" id="|+5FY1Idzwakr+Zn4.^/">
                                 <mutation else="1"></mutation>
                                 <value name="IF0">
-                                  <block type="logic_compare" id="74thu{@/a2qMZfJX6zLn">
+                                  <block type="logic_compare" id="j#aYEgJkNUbuFS?@*6?J">
                                     <field name="OP">EQ</field>
                                     <value name="A">
-                                      <block type="get_value" id=")DRu!k9X[2|m}+g.F.px">
+                                      <block type="get_value" id="/@4[n;?wikGcBp}PP4sA">
                                         <field name="ATTR">val</field>
-                                        <field name="OID">zigbee.0.00158d00025ed5ed.opened</field>
+                                        <field name="OID">zigbee.0.00158d00025ed27b.opened</field>
                                       </block>
                                     </value>
                                     <value name="B">
-                                      <block type="logic_boolean" id="ew_$E2PMBC!Od^vvMj/#">
+                                      <block type="logic_boolean" id="|E4wS=)PVDixY]%A}]4m">
                                         <field name="BOOL">TRUE</field>
                                       </block>
                                     </value>
                                   </block>
                                 </value>
                                 <statement name="DO0">
-                                  <block type="control" id=");!9//Ba]0Tv_:;bt!A@">
+                                  <block type="control" id="sSoR.Cmkk~Ug6sa%6p.M">
                                     <mutation delay_input="false"></mutation>
-                                    <field name="OID">javascript.0.Fenster.Badezimmer_links</field>
+                                    <field name="OID">javascript.0.Fenster.Wohnzimmer_klein</field>
                                     <field name="WITH_DELAY">FALSE</field>
                                     <value name="VALUE">
-                                      <block type="logic_boolean" id="oNmcC;s)nhxsUdB]Zvh_">
+                                      <block type="logic_boolean" id="y==*j;`%#H([KrBjjr8l">
                                         <field name="BOOL">TRUE</field>
                                       </block>
                                     </value>
                                     <next>
-                                      <block type="math_change" id="Vlu!sd,]v~Jyho4(;e6u">
+                                      <block type="math_change" id="-jwe$LYL*n5f3WI#dn$c">
                                         <field name="VAR" id="YS@v,^6QAG?xJ6tmR*Mb" variabletype="">AnzahlOffen</field>
                                         <value name="DELTA">
                                           <shadow type="math_number" id="0G2vHGsrZdtZO%BHVN,o">
                                             <field name="NUM">1</field>
                                           </shadow>
-                                          <block type="math_number" id="I^aoB4_gD+YV#M%d;x)A">
+                                          <block type="math_number" id="^Fh[otWmSV[m,)p*Z`:M">
                                             <field name="NUM">1</field>
                                           </block>
                                         </value>
@@ -374,54 +218,54 @@
                                   </block>
                                 </statement>
                                 <statement name="ELSE">
-                                  <block type="control" id="D_zccUg{d%4!G{)kY545">
+                                  <block type="control" id="/RSUzk#}`t{knQ:UtLwD">
                                     <mutation delay_input="false"></mutation>
-                                    <field name="OID">javascript.0.Fenster.Badezimmer_links</field>
+                                    <field name="OID">javascript.0.Fenster.Wohnzimmer_klein</field>
                                     <field name="WITH_DELAY">FALSE</field>
                                     <value name="VALUE">
-                                      <block type="logic_boolean" id=":,w~Gdbb]NR5;`1!Mqh*">
+                                      <block type="logic_boolean" id="ZQD75zYLr!!@]:eM};nP">
                                         <field name="BOOL">FALSE</field>
                                       </block>
                                     </value>
                                   </block>
                                 </statement>
                                 <next>
-                                  <block type="controls_if" id="cDM?k)rQpntSSlZLmnnt">
+                                  <block type="controls_if" id="z#.i-:ai8YFj)tG{tuCM">
                                     <mutation else="1"></mutation>
                                     <value name="IF0">
-                                      <block type="logic_compare" id="0;p~A9},YAHf4y}VDmZU">
+                                      <block type="logic_compare" id=")W8p:,ywrtx)9nF7oSmF">
                                         <field name="OP">EQ</field>
                                         <value name="A">
-                                          <block type="get_value" id="ic2w}}vVB8*~h46/2}R8">
+                                          <block type="get_value" id="}OzFz{+TDc][w3?P06CU">
                                             <field name="ATTR">val</field>
-                                            <field name="OID">zigbee.0.00158d00025ed203.opened</field>
+                                            <field name="OID">zigbee.0.00158d0002e21304.opened</field>
                                           </block>
                                         </value>
                                         <value name="B">
-                                          <block type="logic_boolean" id="DPnzdc1XV*ywWU.1B*?B">
+                                          <block type="logic_boolean" id="E]#^pwy3_}-JP=P*!4_a">
                                             <field name="BOOL">TRUE</field>
                                           </block>
                                         </value>
                                       </block>
                                     </value>
                                     <statement name="DO0">
-                                      <block type="control" id="x5r:zAyQj|4Dz,|i[gQW">
+                                      <block type="control" id="R2|7N9;QF%iHA0^2Ln9T">
                                         <mutation delay_input="false"></mutation>
-                                        <field name="OID">javascript.0.Fenster.Kinderzimmer_links</field>
+                                        <field name="OID">javascript.0.Fenster.Küchenfenster</field>
                                         <field name="WITH_DELAY">FALSE</field>
                                         <value name="VALUE">
-                                          <block type="logic_boolean" id="O;5yaS{#w!bOtx)qU/0J">
+                                          <block type="logic_boolean" id=",Y^S+Pw{oRBLh?veVRzY">
                                             <field name="BOOL">TRUE</field>
                                           </block>
                                         </value>
                                         <next>
-                                          <block type="math_change" id="yfq]|My;aUB|8Lj1~t2Z">
+                                          <block type="math_change" id="Ehjo!W9u$nLu$:$SZ1q7">
                                             <field name="VAR" id="YS@v,^6QAG?xJ6tmR*Mb" variabletype="">AnzahlOffen</field>
                                             <value name="DELTA">
                                               <shadow type="math_number" id="0G2vHGsrZdtZO%BHVN,o">
                                                 <field name="NUM">1</field>
                                               </shadow>
-                                              <block type="math_number" id="^jEh:I#gchS+CggWvuS!">
+                                              <block type="math_number" id="+YW6urOGQM1@Y7eH.j)J">
                                                 <field name="NUM">1</field>
                                               </block>
                                             </value>
@@ -430,54 +274,54 @@
                                       </block>
                                     </statement>
                                     <statement name="ELSE">
-                                      <block type="control" id="d!JQi%3%^9z9)?hxX~KJ">
+                                      <block type="control" id="G/tL)I,?9jq^qPn]!7x0">
                                         <mutation delay_input="false"></mutation>
-                                        <field name="OID">javascript.0.Fenster.Kinderzimmer_links</field>
+                                        <field name="OID">javascript.0.Fenster.Küchenfenster</field>
                                         <field name="WITH_DELAY">FALSE</field>
                                         <value name="VALUE">
-                                          <block type="logic_boolean" id="g]yyfR{#SD-A!-5b}qU]">
+                                          <block type="logic_boolean" id="T3RU(WbKxT$jm,I%*et#">
                                             <field name="BOOL">FALSE</field>
                                           </block>
                                         </value>
                                       </block>
                                     </statement>
                                     <next>
-                                      <block type="controls_if" id="JnQS}m66=n]],4xAK`T5">
+                                      <block type="controls_if" id="=#gdKDmL);P7|$Y[dSAT">
                                         <mutation else="1"></mutation>
                                         <value name="IF0">
-                                          <block type="logic_compare" id="Jw;kMEO_||hd`N=;YFY*">
+                                          <block type="logic_compare" id="YL-^ca]]7M.kx]xltKpG">
                                             <field name="OP">EQ</field>
                                             <value name="A">
-                                              <block type="get_value" id="`uOoNhnKIZ=I%2Ha]+1*">
+                                              <block type="get_value" id="fv2BRSzNd^k8-}}=hMC~">
                                                 <field name="ATTR">val</field>
-                                                <field name="OID">zigbee.0.00158d00025ed272.opened</field>
+                                                <field name="OID">zigbee.0.00158d000309f195.opened</field>
                                               </block>
                                             </value>
                                             <value name="B">
-                                              <block type="logic_boolean" id="_X3EFs^u6)k^FC@Z!=wl">
+                                              <block type="logic_boolean" id="s%z^|LrlM$?+C[tP}=MH">
                                                 <field name="BOOL">TRUE</field>
                                               </block>
                                             </value>
                                           </block>
                                         </value>
                                         <statement name="DO0">
-                                          <block type="control" id="hgJBtS6nAhkITdD*D=I~">
+                                          <block type="control" id="gy}]SkKMK]~.3Q%M_M}#">
                                             <mutation delay_input="false"></mutation>
-                                            <field name="OID">javascript.0.Fenster.Kinderzimmer_rechts</field>
+                                            <field name="OID">javascript.0.Fenster.Badezimmer_rechts</field>
                                             <field name="WITH_DELAY">FALSE</field>
                                             <value name="VALUE">
-                                              <block type="logic_boolean" id="zJUDkG0xx_skA{.gA}C_">
+                                              <block type="logic_boolean" id="[DvP-%3RwH.sW~w;bd!o">
                                                 <field name="BOOL">TRUE</field>
                                               </block>
                                             </value>
                                             <next>
-                                              <block type="math_change" id="sju;W`rnyP9F,[sFdf_a">
+                                              <block type="math_change" id="lIf(p|7Y9KBJw~mgWSbC">
                                                 <field name="VAR" id="YS@v,^6QAG?xJ6tmR*Mb" variabletype="">AnzahlOffen</field>
                                                 <value name="DELTA">
                                                   <shadow type="math_number" id="0G2vHGsrZdtZO%BHVN,o">
                                                     <field name="NUM">1</field>
                                                   </shadow>
-                                                  <block type="math_number" id="4esr)_jt](|,z}R835z8">
+                                                  <block type="math_number" id="w%G|,`-A^C_e@UWLwGMj">
                                                     <field name="NUM">1</field>
                                                   </block>
                                                 </value>
@@ -486,54 +330,54 @@
                                           </block>
                                         </statement>
                                         <statement name="ELSE">
-                                          <block type="control" id="vaX;xE]9TqRtABuBdO70">
+                                          <block type="control" id="RSc2ng)WLh-ewHJl@U0#">
                                             <mutation delay_input="false"></mutation>
-                                            <field name="OID">javascript.0.Fenster.Kinderzimmer_rechts</field>
+                                            <field name="OID">javascript.0.Fenster.Badezimmer_rechts</field>
                                             <field name="WITH_DELAY">FALSE</field>
                                             <value name="VALUE">
-                                              <block type="logic_boolean" id="(,4hc1XlpGRaA4IO8zuQ">
+                                              <block type="logic_boolean" id="7a@ctW.$xP1L$r/U$%Om">
                                                 <field name="BOOL">FALSE</field>
                                               </block>
                                             </value>
                                           </block>
                                         </statement>
                                         <next>
-                                          <block type="controls_if" id="+OHR`3|hTvxV=a5#lvac">
+                                          <block type="controls_if" id=".u#8[am/51A,T5iwq:8d">
                                             <mutation else="1"></mutation>
                                             <value name="IF0">
-                                              <block type="logic_compare" id="}{iv?xY:WH,!+#f3N,G.">
+                                              <block type="logic_compare" id="74thu{@/a2qMZfJX6zLn">
                                                 <field name="OP">EQ</field>
                                                 <value name="A">
-                                                  <block type="get_value" id="GS%%IUB~a%.e.K{s|MC$">
+                                                  <block type="get_value" id=")DRu!k9X[2|m}+g.F.px">
                                                     <field name="ATTR">val</field>
-                                                    <field name="OID">zigbee.0.00158d0002e2144f.opened</field>
+                                                    <field name="OID">zigbee.0.00158d00025ed5ed.opened</field>
                                                   </block>
                                                 </value>
                                                 <value name="B">
-                                                  <block type="logic_boolean" id="~@r02regq~YO/Oyp0PMH">
+                                                  <block type="logic_boolean" id="ew_$E2PMBC!Od^vvMj/#">
                                                     <field name="BOOL">TRUE</field>
                                                   </block>
                                                 </value>
                                               </block>
                                             </value>
                                             <statement name="DO0">
-                                              <block type="control" id="HQrW2]0Ied5:{7aKbe++">
+                                              <block type="control" id=");!9//Ba]0Tv_:;bt!A@">
                                                 <mutation delay_input="false"></mutation>
-                                                <field name="OID">javascript.0.Fenster.Schlafzimmer_groß</field>
+                                                <field name="OID">javascript.0.Fenster.Badezimmer_links</field>
                                                 <field name="WITH_DELAY">FALSE</field>
                                                 <value name="VALUE">
-                                                  <block type="logic_boolean" id="~b1C{W!?Gy=hMSQ+v!kI">
+                                                  <block type="logic_boolean" id="oNmcC;s)nhxsUdB]Zvh_">
                                                     <field name="BOOL">TRUE</field>
                                                   </block>
                                                 </value>
                                                 <next>
-                                                  <block type="math_change" id="7A^LJVl|Om:deYFk}slq">
+                                                  <block type="math_change" id="Vlu!sd,]v~Jyho4(;e6u">
                                                     <field name="VAR" id="YS@v,^6QAG?xJ6tmR*Mb" variabletype="">AnzahlOffen</field>
                                                     <value name="DELTA">
                                                       <shadow type="math_number" id="0G2vHGsrZdtZO%BHVN,o">
                                                         <field name="NUM">1</field>
                                                       </shadow>
-                                                      <block type="math_number" id="-T+QBSu4SnB4:nzhBk9a">
+                                                      <block type="math_number" id="I^aoB4_gD+YV#M%d;x)A">
                                                         <field name="NUM">1</field>
                                                       </block>
                                                     </value>
@@ -542,54 +386,54 @@
                                               </block>
                                             </statement>
                                             <statement name="ELSE">
-                                              <block type="control" id="B_mlE_vsJigVzB9~gUZq">
+                                              <block type="control" id="D_zccUg{d%4!G{)kY545">
                                                 <mutation delay_input="false"></mutation>
-                                                <field name="OID">javascript.0.Fenster.Schlafzimmer_groß</field>
+                                                <field name="OID">javascript.0.Fenster.Badezimmer_links</field>
                                                 <field name="WITH_DELAY">FALSE</field>
                                                 <value name="VALUE">
-                                                  <block type="logic_boolean" id="iK+EX=eGgklUz8_`hz0_">
+                                                  <block type="logic_boolean" id=":,w~Gdbb]NR5;`1!Mqh*">
                                                     <field name="BOOL">FALSE</field>
                                                   </block>
                                                 </value>
                                               </block>
                                             </statement>
                                             <next>
-                                              <block type="controls_if" id="IBJ2O[Z7ik`^.0/`nBTk">
+                                              <block type="controls_if" id="cDM?k)rQpntSSlZLmnnt">
                                                 <mutation else="1"></mutation>
                                                 <value name="IF0">
-                                                  <block type="logic_compare" id="eulEgio.!8x_#pa^]@R%">
+                                                  <block type="logic_compare" id="0;p~A9},YAHf4y}VDmZU">
                                                     <field name="OP">EQ</field>
                                                     <value name="A">
-                                                      <block type="get_value" id="%c9XEk+k]KB![zB076$)">
+                                                      <block type="get_value" id="ic2w}}vVB8*~h46/2}R8">
                                                         <field name="ATTR">val</field>
-                                                        <field name="OID">zigbee.0.00158d00025ed230.opened</field>
+                                                        <field name="OID">zigbee.0.00158d00025ed203.opened</field>
                                                       </block>
                                                     </value>
                                                     <value name="B">
-                                                      <block type="logic_boolean" id="ksR4pR53OP@06;QE$8N^">
+                                                      <block type="logic_boolean" id="DPnzdc1XV*ywWU.1B*?B">
                                                         <field name="BOOL">TRUE</field>
                                                       </block>
                                                     </value>
                                                   </block>
                                                 </value>
                                                 <statement name="DO0">
-                                                  <block type="control" id="wWLHxmE~=B`_bKd}HBow">
+                                                  <block type="control" id="x5r:zAyQj|4Dz,|i[gQW">
                                                     <mutation delay_input="false"></mutation>
-                                                    <field name="OID">javascript.0.Fenster.Schlafzimmer_klein</field>
+                                                    <field name="OID">javascript.0.Fenster.Kinderzimmer_links</field>
                                                     <field name="WITH_DELAY">FALSE</field>
                                                     <value name="VALUE">
-                                                      <block type="logic_boolean" id="/Zg]Y3=g|;i^BQ=/bgLt">
+                                                      <block type="logic_boolean" id="O;5yaS{#w!bOtx)qU/0J">
                                                         <field name="BOOL">TRUE</field>
                                                       </block>
                                                     </value>
                                                     <next>
-                                                      <block type="math_change" id="ElxN7Rv~ss5Bh^e/qBHi">
+                                                      <block type="math_change" id="yfq]|My;aUB|8Lj1~t2Z">
                                                         <field name="VAR" id="YS@v,^6QAG?xJ6tmR*Mb" variabletype="">AnzahlOffen</field>
                                                         <value name="DELTA">
                                                           <shadow type="math_number" id="0G2vHGsrZdtZO%BHVN,o">
                                                             <field name="NUM">1</field>
                                                           </shadow>
-                                                          <block type="math_number" id="3F1%/s)pE]WbAB2B?lbM">
+                                                          <block type="math_number" id="^jEh:I#gchS+CggWvuS!">
                                                             <field name="NUM">1</field>
                                                           </block>
                                                         </value>
@@ -598,30 +442,204 @@
                                                   </block>
                                                 </statement>
                                                 <statement name="ELSE">
-                                                  <block type="control" id="t.N,5iVP7vp((!Boreqq">
+                                                  <block type="control" id="d!JQi%3%^9z9)?hxX~KJ">
                                                     <mutation delay_input="false"></mutation>
-                                                    <field name="OID">javascript.0.Fenster.Schlafzimmer_klein</field>
+                                                    <field name="OID">javascript.0.Fenster.Kinderzimmer_links</field>
                                                     <field name="WITH_DELAY">FALSE</field>
                                                     <value name="VALUE">
-                                                      <block type="logic_boolean" id="KRl9d]|f*OkRL2ma-zy4">
+                                                      <block type="logic_boolean" id="g]yyfR{#SD-A!-5b}qU]">
                                                         <field name="BOOL">FALSE</field>
                                                       </block>
                                                     </value>
                                                   </block>
                                                 </statement>
                                                 <next>
-                                                  <block type="update" id="OL5=6jP{T@91.f(!qddu">
-                                                    <mutation delay_input="true"></mutation>
-                                                    <field name="OID">javascript.0.Fenster.Fenster</field>
-                                                    <field name="WITH_DELAY">TRUE</field>
-                                                    <field name="DELAY_MS">1000</field>
-                                                    <field name="UNIT">ms</field>
-                                                    <field name="CLEAR_RUNNING">FALSE</field>
-                                                    <value name="VALUE">
-                                                      <block type="variables_get" id="HUJ)h[rJ,d*2u0P^ig/R">
-                                                        <field name="VAR" id="YS@v,^6QAG?xJ6tmR*Mb" variabletype="">AnzahlOffen</field>
+                                                  <block type="controls_if" id="JnQS}m66=n]],4xAK`T5">
+                                                    <mutation else="1"></mutation>
+                                                    <value name="IF0">
+                                                      <block type="logic_compare" id="Jw;kMEO_||hd`N=;YFY*">
+                                                        <field name="OP">EQ</field>
+                                                        <value name="A">
+                                                          <block type="get_value" id="`uOoNhnKIZ=I%2Ha]+1*">
+                                                            <field name="ATTR">val</field>
+                                                            <field name="OID">zigbee.0.00158d00025ed272.opened</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="B">
+                                                          <block type="logic_boolean" id="_X3EFs^u6)k^FC@Z!=wl">
+                                                            <field name="BOOL">TRUE</field>
+                                                          </block>
+                                                        </value>
                                                       </block>
                                                     </value>
+                                                    <statement name="DO0">
+                                                      <block type="control" id="hgJBtS6nAhkITdD*D=I~">
+                                                        <mutation delay_input="false"></mutation>
+                                                        <field name="OID">javascript.0.Fenster.Kinderzimmer_rechts</field>
+                                                        <field name="WITH_DELAY">FALSE</field>
+                                                        <value name="VALUE">
+                                                          <block type="logic_boolean" id="zJUDkG0xx_skA{.gA}C_">
+                                                            <field name="BOOL">TRUE</field>
+                                                          </block>
+                                                        </value>
+                                                        <next>
+                                                          <block type="math_change" id="sju;W`rnyP9F,[sFdf_a">
+                                                            <field name="VAR" id="YS@v,^6QAG?xJ6tmR*Mb" variabletype="">AnzahlOffen</field>
+                                                            <value name="DELTA">
+                                                              <shadow type="math_number" id="0G2vHGsrZdtZO%BHVN,o">
+                                                                <field name="NUM">1</field>
+                                                              </shadow>
+                                                              <block type="math_number" id="4esr)_jt](|,z}R835z8">
+                                                                <field name="NUM">1</field>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </statement>
+                                                    <statement name="ELSE">
+                                                      <block type="control" id="vaX;xE]9TqRtABuBdO70">
+                                                        <mutation delay_input="false"></mutation>
+                                                        <field name="OID">javascript.0.Fenster.Kinderzimmer_rechts</field>
+                                                        <field name="WITH_DELAY">FALSE</field>
+                                                        <value name="VALUE">
+                                                          <block type="logic_boolean" id="(,4hc1XlpGRaA4IO8zuQ">
+                                                            <field name="BOOL">FALSE</field>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </statement>
+                                                    <next>
+                                                      <block type="controls_if" id="+OHR`3|hTvxV=a5#lvac">
+                                                        <mutation else="1"></mutation>
+                                                        <value name="IF0">
+                                                          <block type="logic_compare" id="}{iv?xY:WH,!+#f3N,G.">
+                                                            <field name="OP">EQ</field>
+                                                            <value name="A">
+                                                              <block type="get_value" id="GS%%IUB~a%.e.K{s|MC$">
+                                                                <field name="ATTR">val</field>
+                                                                <field name="OID">zigbee.0.00158d0002e2144f.opened</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="B">
+                                                              <block type="logic_boolean" id="~@r02regq~YO/Oyp0PMH">
+                                                                <field name="BOOL">TRUE</field>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </value>
+                                                        <statement name="DO0">
+                                                          <block type="control" id="HQrW2]0Ied5:{7aKbe++">
+                                                            <mutation delay_input="false"></mutation>
+                                                            <field name="OID">javascript.0.Fenster.Schlafzimmer_groß</field>
+                                                            <field name="WITH_DELAY">FALSE</field>
+                                                            <value name="VALUE">
+                                                              <block type="logic_boolean" id="~b1C{W!?Gy=hMSQ+v!kI">
+                                                                <field name="BOOL">TRUE</field>
+                                                              </block>
+                                                            </value>
+                                                            <next>
+                                                              <block type="math_change" id="7A^LJVl|Om:deYFk}slq">
+                                                                <field name="VAR" id="YS@v,^6QAG?xJ6tmR*Mb" variabletype="">AnzahlOffen</field>
+                                                                <value name="DELTA">
+                                                                  <shadow type="math_number" id="0G2vHGsrZdtZO%BHVN,o">
+                                                                    <field name="NUM">1</field>
+                                                                  </shadow>
+                                                                  <block type="math_number" id="-T+QBSu4SnB4:nzhBk9a">
+                                                                    <field name="NUM">1</field>
+                                                                  </block>
+                                                                </value>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </statement>
+                                                        <statement name="ELSE">
+                                                          <block type="control" id="B_mlE_vsJigVzB9~gUZq">
+                                                            <mutation delay_input="false"></mutation>
+                                                            <field name="OID">javascript.0.Fenster.Schlafzimmer_groß</field>
+                                                            <field name="WITH_DELAY">FALSE</field>
+                                                            <value name="VALUE">
+                                                              <block type="logic_boolean" id="iK+EX=eGgklUz8_`hz0_">
+                                                                <field name="BOOL">FALSE</field>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </statement>
+                                                        <next>
+                                                          <block type="controls_if" id="IBJ2O[Z7ik`^.0/`nBTk">
+                                                            <mutation else="1"></mutation>
+                                                            <value name="IF0">
+                                                              <block type="logic_compare" id="eulEgio.!8x_#pa^]@R%">
+                                                                <field name="OP">EQ</field>
+                                                                <value name="A">
+                                                                  <block type="get_value" id="%c9XEk+k]KB![zB076$)">
+                                                                    <field name="ATTR">val</field>
+                                                                    <field name="OID">zigbee.0.00158d00025ed230.opened</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="B">
+                                                                  <block type="logic_boolean" id="ksR4pR53OP@06;QE$8N^">
+                                                                    <field name="BOOL">TRUE</field>
+                                                                  </block>
+                                                                </value>
+                                                              </block>
+                                                            </value>
+                                                            <statement name="DO0">
+                                                              <block type="control" id="wWLHxmE~=B`_bKd}HBow">
+                                                                <mutation delay_input="false"></mutation>
+                                                                <field name="OID">javascript.0.Fenster.Schlafzimmer_klein</field>
+                                                                <field name="WITH_DELAY">FALSE</field>
+                                                                <value name="VALUE">
+                                                                  <block type="logic_boolean" id="/Zg]Y3=g|;i^BQ=/bgLt">
+                                                                    <field name="BOOL">TRUE</field>
+                                                                  </block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="math_change" id="ElxN7Rv~ss5Bh^e/qBHi">
+                                                                    <field name="VAR" id="YS@v,^6QAG?xJ6tmR*Mb" variabletype="">AnzahlOffen</field>
+                                                                    <value name="DELTA">
+                                                                      <shadow type="math_number" id="0G2vHGsrZdtZO%BHVN,o">
+                                                                        <field name="NUM">1</field>
+                                                                      </shadow>
+                                                                      <block type="math_number" id="3F1%/s)pE]WbAB2B?lbM">
+                                                                        <field name="NUM">1</field>
+                                                                      </block>
+                                                                    </value>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </statement>
+                                                            <statement name="ELSE">
+                                                              <block type="control" id="t.N,5iVP7vp((!Boreqq">
+                                                                <mutation delay_input="false"></mutation>
+                                                                <field name="OID">javascript.0.Fenster.Schlafzimmer_klein</field>
+                                                                <field name="WITH_DELAY">FALSE</field>
+                                                                <value name="VALUE">
+                                                                  <block type="logic_boolean" id="KRl9d]|f*OkRL2ma-zy4">
+                                                                    <field name="BOOL">FALSE</field>
+                                                                  </block>
+                                                                </value>
+                                                              </block>
+                                                            </statement>
+                                                            <next>
+                                                              <block type="update" id="OL5=6jP{T@91.f(!qddu">
+                                                                <mutation delay_input="true"></mutation>
+                                                                <field name="OID">javascript.0.Fenster.Fenster</field>
+                                                                <field name="WITH_DELAY">TRUE</field>
+                                                                <field name="DELAY_MS">1000</field>
+                                                                <field name="UNIT">ms</field>
+                                                                <field name="CLEAR_RUNNING">FALSE</field>
+                                                                <value name="VALUE">
+                                                                  <block type="variables_get" id="HUJ)h[rJ,d*2u0P^ig/R">
+                                                                    <field name="VAR" id="YS@v,^6QAG?xJ6tmR*Mb" variabletype="">AnzahlOffen</field>
+                                                                  </block>
+                                                                </value>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
                                                   </block>
                                                 </next>
                                               </block>
@@ -641,9 +659,9 @@
                   </block>
                 </next>
               </block>
-            </next>
+            </statement>
           </block>
-        </statement>
+        </next>
       </block>
     </next>
   </block>
@@ -883,5 +901,23 @@
         </next>
       </block>
     </statement>
+  </block>
+  <block type="comment" id="RoGp%o}Qgb9.aFh3Lzz8" x="1237" y="1737">
+    <field name="COMMENT">Hier den selbst erstellten Datenpunkt angeben</field>
+    <next>
+      <block type="comment" id="#jaC)uE++Wrr=rmpX[~/">
+        <field name="COMMENT">und darunter das Fenster benennen wie</field>
+        <next>
+          <block type="comment" id="rATc7*sZOipxFU^b`N16">
+            <field name="COMMENT">es in dem Datenpunkt der offenen Fenster</field>
+            <next>
+              <block type="comment" id="deCNM+(nNDS2^J|){`,r">
+                <field name="COMMENT">ausgeschrieben werden soll.</field>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
   </block>
 </xml>
