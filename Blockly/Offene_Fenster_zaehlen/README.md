@@ -39,6 +39,9 @@ Offene Fenster,,,,,Badezimmer rechts,,,Wohnzimmer groß,,,Schlafzimmer groß,,,
 ```
 ![States screenshot beispiel](https://raw.githubusercontent.com/smarthome-ts-de/TS_Community_Script_library/master/Blockly/Offene_Fenster_zaehlen/States.jpg)
   
+## Contributors and source reffenrences
+  
+
 ## Changelog
 
 * (Denkra) Script veröffentlicht
