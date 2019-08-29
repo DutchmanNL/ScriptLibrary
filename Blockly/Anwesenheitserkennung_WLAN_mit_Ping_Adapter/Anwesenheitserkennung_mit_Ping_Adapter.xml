@@ -1,0 +1,126 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="comment" id="=wQpIg`=Oo|RYIfiJ=vp" x="-212" y="-413">
+    <field name="COMMENT">Hier das zu überwachende Gerät eintragen</field>
+  </block>
+  <block type="on_ext" id="_ssJnMhul+gYmlgzjBdf" x="-487" y="-387">
+    <mutation items="1"></mutation>
+    <field name="CONDITION">ne</field>
+    <field name="ACK_CONDITION"></field>
+    <value name="OID0">
+      <shadow type="field_oid" id="3*x8ktGby9subx#QYc_Y">
+        <field name="oid">radar.0.Galaxy_S10+.here</field>
+      </shadow>
+    </value>
+    <statement name="STATEMENT">
+      <block type="controls_if" id="2zU7k17w0nolIrG]MxNC">
+        <value name="IF0">
+          <block type="logic_compare" id="Lqc[B@3ni,Sn,XUyKh6J">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="get_value" id="_1bHt9%)!Gr3,NLj`m5z">
+                <field name="ATTR">val</field>
+                <field name="OID">radar.0.Galaxy_S10+.here</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="logic_boolean" id="p1BHXP?cha!u`4N5~j:6">
+                <field name="BOOL">TRUE</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="comment" id="2X7tyT5}FJW]kB5MW/h!">
+            <field name="COMMENT">Nachricht bei Anwesenheit</field>
+            <next>
+              <block type="telegram" id="Z@PA_.JuI+tbSM|2YZd7">
+                <field name="INSTANCE">.0</field>
+                <field name="LOG"></field>
+                <field name="SILENT">FALSE</field>
+                <field name="PARSEMODE">default</field>
+                <value name="MESSAGE">
+                  <shadow type="text" id="2|HVE/C7:E4c(/O~go/i">
+                    <field name="TEXT">Willkommen Zuhause</field>
+                  </shadow>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="controls_if" id="V6]e:v6u:?I_dnQ6L_VO">
+            <value name="IF0">
+              <block type="logic_compare" id="YL]^MiM0C_d90EjXd7qr">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="get_value" id="yM=9zWrslsViHeXAVGm6">
+                    <field name="ATTR">val</field>
+                    <field name="OID">radar.0.Galaxy_S10+.here</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="logic_boolean" id="Ih3r4AeLcP.DF2IWty!4">
+                    <field name="BOOL">FALSE</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="comment" id=":XRI(5q~[LnJ3cD)}h[f">
+                <field name="COMMENT">Nachricht bei Abwesenheit plus Abfrage </field>
+                <next>
+                  <block type="comment" id="B|Q++oQoSf*,wK5mXb=V">
+                    <field name="COMMENT">was noch angezeigt werden soll</field>
+                    <next>
+                      <block type="telegram" id="@;d+7yvf2*9iP:`Z}K67">
+                        <field name="INSTANCE">.0</field>
+                        <field name="LOG"></field>
+                        <field name="SILENT">FALSE</field>
+                        <field name="PARSEMODE">default</field>
+                        <value name="MESSAGE">
+                          <shadow type="text" id="te)o_w9CP1_=dWX{QIEE">
+                            <field name="TEXT">Fahr vorsichtig. Bis später</field>
+                          </shadow>
+                          <block type="text_join" id="m.`maa34+8q8q,)VQi#)">
+                            <mutation items="4"></mutation>
+                            <value name="ADD0">
+                              <block type="text" id="#QbWHDfZ3?xw*j{ZnYVN">
+                                <field name="TEXT">Fahr vorsichtig. Bis später</field>
+                              </block>
+                            </value>
+                            <value name="ADD1">
+                              <block type="text_newline" id="4kqhg+E$j6%ujay#/,D0">
+                                <field name="Type">\n</field>
+                              </block>
+                            </value>
+                            <value name="ADD2">
+                              <block type="text_newline" id="}z`;a3sOdAkE^Jn,sBS{">
+                                <field name="Type">\n</field>
+                              </block>
+                            </value>
+                            <value name="ADD3">
+                              <block type="get_value" id="yDlNyY$`#Wi%Em#[Q7|9">
+                                <field name="ATTR">val</field>
+                                <field name="OID">javascript.0.Fenster.Fenster_Text</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="comment" id="?/ecco5+d3WivCZFZu`C" x="-162" y="-337">
+    <field name="COMMENT">Hier das zu überwachende Gerät eintragen</field>
+  </block>
+  <block type="comment" id="UO+kp+4nZpv?]2,;t4`;" x="-163" y="-112">
+    <field name="COMMENT">Hier das zu überwachende Gerät eintragen</field>
+  </block>
+</xml>
