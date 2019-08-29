@@ -2,22 +2,9 @@
 
 Collection of vis examples
 
-## Repository structure
+## Heizungswidget
+![Heizungswidget](https://raw.githubusercontent.com/smarthome-ts-de/TS_Community_Script_library/master/vis_example/Heizungs_Widgets/HeizungsWidget_01.jpg)
 
-- Script_type (java, blockly, vis)
-  - README.md
-  - Scripte_name_1
-    - Readme.md
-    - Scriptname.js
-  - Scripte_name_2
-    - Readme.md
-    - Scriptname.js
-  - Scripte_name_3
-    - Readme.md
-    - Scriptname.js
-  - Scripte_name_4
-  - Readme.md
-  - Scriptname.js
 
 ## Changelog
 
