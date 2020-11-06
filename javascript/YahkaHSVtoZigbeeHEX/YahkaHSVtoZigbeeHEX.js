@@ -4,9 +4,7 @@
 // ##############################
 
 const zigbeeDevice = [
-	'zigbee.0.00178801038952fd',
-    'zigbee.0.0017880103893fcc',
-    // 'wled.0.cc50e35b832b.seg.0.col.0_HEX'
+	'zigbee.0.xxxxxxxxxxxxxx',
 ];
 
 // Prepare variables
