@@ -1,12 +1,35 @@
-# Automatically create an grafana URL based  on dropdown for view and time range
+# Automatically create an grafana URL based on dropdown for view and time range
 
-ToDo
+Using this blockly script will give you the possibility to easily switch between your differnt Grafana Views and their time range.  
 
 ## URL build blockly
-![URL Builder](https://raw.githubusercontent.com/smarthome-ts-de/TS_Community_Script_library/master/vis_example/grafanaView_Changer/img_blocklyURLbuilder.png)
+![URL Builder](https://raw.githubusercontent.com/smarthome-ts-de/TS_Community_Script_library/master/vis_example/grafanaView_Changer/blocklyURLbuilder.png)
 
 ## configuration
-ToDo
+### Blockly
+Import content from blockly_grafanaVisu.xml to a new Blockly script in ioBroker
+
+### Initialise variables
+ipAddr: Set IP address over which grafana is accessable
+port: Set port over which grafana is accessable
+
+
+### Edit the path for new created states
+Go in your Blockly editor to the block "Javascript-Funktion - createStates" and hit the three dots (...)
+
+Here you can set the path where the new states shall be created.
+If you change the default path for the new states you need to adapt this values in the blockly as well
+
+## VIS
+To have an easy start import in your VIS view the wiget widdget_grafanaVisuTimeDropdown.json and widdget_grafanaVisuViewDropdown.json
+
+Widget viewSelect
+You need to adapet the attributes "Werte" and "Texte" to your own values
+If your Link to your Grafana view look like this you need to fill "Werte" and "Texte" like this:
+Werte: L6bfbnwWz/benzinpreise
+Texte: Benzinpreise
+
+To show the selected Grafana widget inject an iframe to your VIS view and insert in the attribute "Quelle" the following binding: {0_userdata.0.grafanaVisu.grafanaViewURL}
 
 ## Changelog
 
