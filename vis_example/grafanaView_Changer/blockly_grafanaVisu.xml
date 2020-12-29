@@ -1,0 +1,218 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+    <variables>
+        <variable id="OFsDUTNqnsb/8M!bgOV0">grafanaURL</variable>
+        <variable id="P%uVPs3o6RpfTrq+GsB3">view</variable>
+        <variable id="(/xt0/E(P@E%H1E9+jPx">timeRange</variable>
+        <variable id="j9nj~OIF:7#^4T-.e;Iy">ipAddr</variable>
+        <variable id=";6zgj/pO@Lk),n6@]_(e">port</variable>
+    </variables>
+    <block type="comment" id="l*26szTe=5P-R}f):^o%" x="12" y="-38">
+        <field name="COMMENT">Create states in Userdata</field>
+        <next>
+            <block type="procedures_callcustomnoreturn" id="yr/G$Or^q]I7M3?QTcjZ">
+                <mutation name="createStates"></mutation>
+                <next>
+                    <block type="comment" id="(Y.B`[3VKHOm|@;MJhf%">
+                        <field name="COMMENT">Initialise variables</field>
+                        <next>
+                            <block type="variables_set" id="R{KGdb,,aGH5!3I;Xo}i">
+                                <field name="VAR" id="P%uVPs3o6RpfTrq+GsB3">view</field>
+                                <value name="VALUE">
+                                    <block type="get_value" id="TYY:Kbx)S(Z!:ED*))C)">
+                                        <field name="ATTR">val</field>
+                                        <field name="OID">0_userdata.0.grafanaVisu.grafanaView</field>
+                                    </block>
+                                </value>
+                                <next>
+                                    <block type="variables_set" id="J5xqmok.xv`WZzaA!n,C">
+                                        <field name="VAR" id="(/xt0/E(P@E%H1E9+jPx">timeRange</field>
+                                        <value name="VALUE">
+                                            <block type="get_value" id="Msbs2q;Rk9V)~TR{.h((">
+                                                <field name="ATTR">val</field>
+                                                <field name="OID">0_userdata.0.grafanaVisu.grafanaTimeRange</field>
+                                            </block>
+                                        </value>
+                                        <next>
+                                            <block type="variables_set" id="?C5OJUY7Yp9)i$e6,Zso">
+                                                <field name="VAR" id="j9nj~OIF:7#^4T-.e;Iy">ipAddr</field>
+                                                <value name="VALUE">
+                                                    <block type="text" id="U%/iT;m,8m~[-q--97~]">
+                                                        <field name="TEXT">192.168.10.96</field>
+                                                    </block>
+                                                </value>
+                                                <next>
+                                                    <block type="variables_set" id="T;).?(T:JtX9a?|~Z;K-">
+                                                        <field name="VAR" id=";6zgj/pO@Lk),n6@]_(e">port</field>
+                                                        <value name="VALUE">
+                                                            <block type="math_number" id="GbU#B]l:Q@zK+G+V9fC8">
+                                                                <field name="NUM">3000</field>
+                                                            </block>
+                                                        </value>
+                                                        <next>
+                                                            <block type="comment" id="!QDzxFNUoAw_!s,!Ipv9">
+                                                                <field name="COMMENT">Build URL</field>
+                                                                <next>
+                                                                    <block type="procedures_callnoreturn" id="N[*6UHGNS]{Pg;oSp/8k">
+                                                                        <mutation name="createGrafanaURL"></mutation>
+                                                                        <next>
+                                                                            <block type="comment" id="i,wnIH0{52d_uyA]{X;%">
+                                                                                <field name="COMMENT">Run script at object changes</field>
+                                                                                <next>
+                                                                                    <block type="on" id="*Hp]JL~OSzGi5y*I4yau">
+                                                                                        <field name="OID">0_userdata.0.grafanaVisu.grafanaTimeRange</field>
+                                                                                        <field name="CONDITION">ne</field>
+                                                                                        <field name="ACK_CONDITION"></field>
+                                                                                        <statement name="STATEMENT">
+                                                                                            <block type="variables_set" id="(,ok_Df)8O62|}J$fUPg">
+                                                                                                <field name="VAR" id="(/xt0/E(P@E%H1E9+jPx">timeRange</field>
+                                                                                                <value name="VALUE">
+                                                                                                    <block type="on_source" id="k1XAZeu?g:BI6.}rFxt9">
+                                                                                                        <field name="ATTR">state.val</field>
+                                                                                                    </block>
+                                                                                                </value>
+                                                                                                <next>
+                                                                                                    <block type="procedures_callnoreturn" id="OK/=055Dl~0sc7P4V%nB">
+                                                                                                        <mutation name="createGrafanaURL"></mutation>
+                                                                                                    </block>
+                                                                                                </next>
+                                                                                            </block>
+                                                                                        </statement>
+                                                                                        <next>
+                                                                                            <block type="on" id="N:j[(W~1?uv^6{r4%7`D">
+                                                                                                <field name="OID">0_userdata.0.grafanaVisu.grafanaView</field>
+                                                                                                <field name="CONDITION">ne</field>
+                                                                                                <field name="ACK_CONDITION"></field>
+                                                                                                <statement name="STATEMENT">
+                                                                                                    <block type="variables_set" id="k[0t)`8pr{,V/[~TD8bI">
+                                                                                                        <field name="VAR" id="P%uVPs3o6RpfTrq+GsB3">view</field>
+                                                                                                        <value name="VALUE">
+                                                                                                            <block type="on_source" id="m4eMT4A9CVLC^YL+RzG/">
+                                                                                                                <field name="ATTR">state.val</field>
+                                                                                                            </block>
+                                                                                                        </value>
+                                                                                                        <next>
+                                                                                                            <block type="procedures_callnoreturn" id="H`R4r/x;om@e;w)J_g$2">
+                                                                                                                <mutation name="createGrafanaURL"></mutation>
+                                                                                                            </block>
+                                                                                                        </next>
+                                                                                                    </block>
+                                                                                                </statement>
+                                                                                            </block>
+                                                                                        </next>
+                                                                                    </block>
+                                                                                </next>
+                                                                            </block>
+                                                                        </next>
+                                                                    </block>
+                                                                </next>
+                                                            </block>
+                                                        </next>
+                                                    </block>
+                                                </next>
+                                            </block>
+                                        </next>
+                                    </block>
+                                </next>
+                            </block>
+                        </next>
+                    </block>
+                </next>
+            </block>
+        </next>
+    </block>
+    <block type="procedures_defcustomnoreturn" id="`rlN/Nn/@+,kW9zvR;8S" x="388" y="112">
+        <mutation statements="false"></mutation>
+        <field name="NAME">createStates</field>
+        <field name="SCRIPT">Y3JlYXRlU3RhdGUoJzBfdXNlcmRhdGEuMC5ncmFmYW5hVmlzdS5ncmFmYW5hVGltZVJhbmdlJyAsIHsKICAgICJuYW1lIjogIlRpbWVSYW5nZSIsCiAgICAicm9sZSI6ICIiLAogICAgInR5cGUiOiAic3RyaW5nIiwKICAgICJyZWFkIjogdHJ1ZSwKICAgICJ3cml0ZSI6IHRydWUKfSkKCmNyZWF0ZVN0YXRlKCcwX3VzZXJkYXRhLjAuZ3JhZmFuYVZpc3UuZ3JhZmFuYVZpZXdVUkwnICwgewogICAgIm5hbWUiOiAiR3JhZmFuYSBWaWV3IFVSTCIsCiAgICAicm9sZSI6ICJpbmZvLnVybCIsCiAgICAidHlwZSI6ICJzdHJpbmciLAogICAgInJlYWQiOiB0cnVlLAogICAgIndyaXRlIjogdHJ1ZSwKICAgICJkZWYiOiAiIgp9KQoKY3JlYXRlU3RhdGUoJzBfdXNlcmRhdGEuMC5ncmFmYW5hVmlzdS5ncmFmYW5hVmlldycgLCB7CiAgICAibmFtZSI6ICJHcmFmYW5hIFZpZXciLAogICAgInJvbGUiOiAiIiwKICAgICJ0eXBlIjogInN0cmluZyIsCiAgICAicmVhZCI6IHRydWUsCiAgICAid3JpdGUiOiB0cnVlLAogICAgImRlZiI6ICIiCn0p</field>
+        <comment pinned="false" h="80" w="160">Beschreibe diese Funktion …</comment>
+    </block>
+    <block type="procedures_defnoreturn" id=".!])]O,v+Fq7z_;{$Vd{" x="387" y="163">
+        <field name="NAME">createGrafanaURL</field>
+        <comment pinned="false" h="80" w="160">Beschreibe diese Funktion …</comment>
+        <statement name="STACK">
+            <block type="comment" id="IvJ;:oe3#FGO`jcVnNAZ">
+                <field name="COMMENT">Build URL</field>
+                <next>
+                    <block type="variables_set" id="GHi[Pg.Ne,a+D}dv]WQx">
+                        <field name="VAR" id="OFsDUTNqnsb/8M!bgOV0">grafanaURL</field>
+                        <value name="VALUE">
+                            <block type="text_join" id="lZ_V*|w-@vRRMIBV||PG">
+                                <mutation items="9"></mutation>
+                                <value name="ADD0">
+                                    <block type="text" id="W_l86nS$=$2?iFO2PWw^">
+                                        <field name="TEXT">http://</field>
+                                    </block>
+                                </value>
+                                <value name="ADD1">
+                                    <block type="variables_get" id="Ll6Pq.m!=]?T=m4EmibE">
+                                        <field name="VAR" id="j9nj~OIF:7#^4T-.e;Iy">ipAddr</field>
+                                    </block>
+                                </value>
+                                <value name="ADD2">
+                                    <block type="text" id="A|Qf?M(e(:hOJB2sb^Wv">
+                                        <field name="TEXT">:</field>
+                                    </block>
+                                </value>
+                                <value name="ADD3">
+                                    <block type="variables_get" id="cMpWTO?v`BCSAicF+b90">
+                                        <field name="VAR" id=";6zgj/pO@Lk),n6@]_(e">port</field>
+                                    </block>
+                                </value>
+                                <value name="ADD4">
+                                    <block type="text" id="QL(|87:hL(V2N03[[h;n">
+                                        <field name="TEXT">/d/</field>
+                                    </block>
+                                </value>
+                                <value name="ADD5">
+                                    <block type="variables_get" id="r2Gy5Q=[W`0,KZ?],A55">
+                                        <field name="VAR" id="P%uVPs3o6RpfTrq+GsB3">view</field>
+                                    </block>
+                                </value>
+                                <value name="ADD6">
+                                    <block type="text" id="#)k3):Oc`[tbC!W#p?3T">
+                                        <field name="TEXT">?orgId=1&amp;refresh=10s&amp;from=now-</field>
+                                    </block>
+                                </value>
+                                <value name="ADD7">
+                                    <block type="variables_get" id="aZdw9Sxs[p]M|c?GfoYP">
+                                        <field name="VAR" id="(/xt0/E(P@E%H1E9+jPx">timeRange</field>
+                                    </block>
+                                </value>
+                                <value name="ADD8">
+                                    <block type="text" id="ub3aq}hWRLGB}(reQ#@X">
+                                        <field name="TEXT">&amp;to=now&amp;kiosk</field>
+                                    </block>
+                                </value>
+                            </block>
+                        </value>
+                        <next>
+                            <block type="update" id="CvhG9([WoDI?m9RYum=B">
+                                <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="false"></mutation>
+                                <field name="OID">0_userdata.0.grafanaVisu.grafanaViewURL</field>
+                                <field name="WITH_DELAY">FALSE</field>
+                                <value name="VALUE">
+                                    <block type="variables_get" id=",BETZPkQMSM#$Ri-jn?#">
+                                        <field name="VAR" id="OFsDUTNqnsb/8M!bgOV0">grafanaURL</field>
+                                    </block>
+                                </value>
+                                <next>
+                                    <block type="debug" id="XJjwnBccME-c.ftUjG/J">
+                                        <field name="Severity">log</field>
+                                        <value name="TEXT">
+                                            <shadow type="text" id="dC^@:91:[d#[kRKu?1oq">
+                                                <field name="TEXT">test</field>
+                                            </shadow>
+                                            <block type="variables_get" id="9A7pq/wGfe|tv:HP@}.3">
+                                                <field name="VAR" id="OFsDUTNqnsb/8M!bgOV0">grafanaURL</field>
+                                            </block>
+                                        </value>
+                                    </block>
+                                </next>
+                            </block>
+                        </next>
+                    </block>
+                </next>
+            </block>
+        </statement>
+    </block>
+</xml>
