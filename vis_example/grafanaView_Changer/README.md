@@ -3,7 +3,7 @@
 Using this blockly script will give you the possibility to easily switch between your differnt Grafana Views and their time range.  
 
 ## URL build blockly
-![URL Builder](https://raw.githubusercontent.com/smarthome-ts-de/TS_Community_Script_library/master/vis_example/grafanaView_Changer/blocklyURLbuilder.png)
+![URL Builder](https://raw.githubusercontent.com/smarthome-ts-de/TS_Community_Script_library/master/vis_example/grafanaView_Changer/img_blocklyURLbuilder.png)
 
 ## configuration
 ### Blockly
